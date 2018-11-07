@@ -97,8 +97,14 @@
     <dl>
       <dt>性别:</dt>
       <dd>
-        <label><input type="radio" name="" value="male"> 男</label>
-        <label><input type="radio" name="" value="female"> 女</label>
+        <!--
+        <label><input type="radio" name="gender" value="male"> 男</label>
+        <label><input type="radio" name="gender" value="female"> 女</label>
+        -->
+        <input type="radio" name="gender" id="genderchoice" value="male">
+        <label for="genderchoice">男</label>
+        <input type="radio" name="gender" id="genderchoice1" value="female">
+        <label for="genderchoice1">女</label>
       </dd>
 
       <dt>年龄:</dt>
@@ -136,7 +142,7 @@
       <dd><textarea name="" id="" cols="30" rows="10">&lt;/textarea></textarea></dd>
     </dl>
 
-<!-- 这块抄的  -->
+
     <fieldset disabled="">
       <legend>这里面的全都禁用了</legend>
       <input type="text">
@@ -195,7 +201,7 @@
 
 
   <hr>
-<!--这段也是我抄的 -->
+
   <img title="image title" src="https://drscdn.500px.org/photo/174778125/m%3D1170_k%3D1/2841ccf2a3720e8e794a6a6930f6ff2c" width=300 usemap="#somemap" alt="">
   <map name="somemap">
     <area shape="rect" coords="55,108,205,200" href="https://www.mi.com/" alt="ieksoef" title="abc" target="_blank">
