@@ -48,7 +48,7 @@
 	  }
       
       
-      .a li:nth-child(n+3)+li:nth-child(-n+7) {
+      .a li:nth-child(n+4):nth-child(-n+7) {
        color: red;
        }
       
@@ -64,16 +64,16 @@
       
       
       
-       .c li {
+       div:last-child  li {
         color: red;
            }
-        .c li:first-child{
+       div:last-child  li:first-child{
           color:grey;
         }
-        .c li:nth-child(2n + 4),
-        .c li:nth-child(3n + 6),
-        .c li:nth-child(5n + 10),
-        .c li:nth-child(7n + 14) {
+        div:last-child  li:nth-child(2n + 4),
+        div:last-child  li:nth-child(3n + 6),
+        div:last-child  li:nth-child(5n + 10),
+        div:last-child  li:nth-child(7n + 14) {
             color: blue;
         }
     </style>
@@ -240,7 +240,7 @@
 
     <hr>
 
-    <div class="c">
+    <div class="b">
       <p>让所有的质数（2，3，4，7，11，13……）跟合数（4，6，8，9，10……）为不同的颜色</p>
       <ul>
         <li>01</li>
