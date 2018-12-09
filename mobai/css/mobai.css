@@ -1,0 +1,100 @@
+html,body,.swiper-container{width: 100%; height: 105%;}
+.swiper-slide{width: 100%; height: 100%;}
+body{font-size: 16px;line-height: 1.42857143}
+.swiper-slide{background-repeat: no-repeat;background-position: center;  background-size: cover;}
+/*版心居中*/
+.container-md{width: 1040px;padding: 0 20px;margin: auto;}
+/*header*/
+.header{position:absolute;  top:0;  left:0;  z-index:10;width: 100%;height: 49px;padding: 15px 0;}
+.logo-links{float: left;}
+.nav-links{float: right;line-height: 49px;}
+.nav-links li{float: left;position: relative}
+.nav-links li a{color: #fff;padding: 8px 20px;}
+.nav-links li a h2{font-size: 20px;font-weight: 400}
+.nav-links li a p{font-size: 14px;font-weight: 400;color: #808080}
+.nav-links li:hover .subnav{
+    display: block;
+}
+/*下拉列表*/
+.subnav:after{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: -12px;
+    left: 30px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+.subnav{display:none;position: absolute;top:49px;left:0;width:240px;height:221px;background: #fff;line-height: normal;border-radius: 4px;}/*把继承过来的行高覆盖掉*/
+.subnav li{width: 100%}
+.subnav li a{padding: 15px 20px 8px;color: #000;display: block}
+.subnav li h2{line-height: 28.5px}
+/*文字模块*/
+.swiper-container{position: relative;}
+.header-wrap{z-index: 10;position: absolute;left: 0;top: 50%;margin-top: -73px;width: 100%;height: 146px;}
+.font-logo{font-family: Overpass, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', Arial, Verdana, sans-serif;letter-spacing: -2.688px;font-size: 67px;line-height: 1;font-weight: 700;color: #fff;margin-bottom: 20px}
+.btn{background: rgba(0,0,0,0.6);display:inline-block;font-size: 22px;padding: 14px 26px;letter-spacing: .1em;border-radius: 6px;color: #fff}
+.btn:hover{background:  rgba(0,0,0,0.8)}
+/*新闻模块*/
+.news{z-index: 10;position: absolute;bottom: 0;left: 0; width: 100%;height: 22px;padding:10px;background:  rgba(0,0,0,0.4)}
+.news a{color: #fff;}
+.news .tip{float:left;padding: 0 8px;background: linear-gradient(to bottom, #ec614f 0%, #ff2e2e 100%);box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);border-radius: 4px;font-size: 12px}
+.news .des{float: left}
+/*四小模块*/
+.hero-promos{margin-left: -3px;margin-top: 3px}
+.hero-promos .hero{float: left;width: 25%;height: 260px;background-repeat: no-repeat;background-position: center;background-size: cover;font-size: 24px;font-weight: 400;text-align: center;padding: 37px;box-sizing: border-box;border-left:3px solid #fff}
+.hero-promos .hero a{color: #fff}
+/*功能说明*/
+.meta{float: left;width: 33.33%;height: 142px;padding: 45px 0;box-sizing: border-box;}
+.meta img{width: 50px;height: 50px;margin-right: 10px;  display: block;float: left}
+.links{padding-left: 9%;}
+.linkk{padding-left: 13%;}
+/*底部*/
+.footer{width: 100%;height: 247px;border: solid 1px #eee}
+.footer-link{width: 100%;height: 157px;padding: 45px 0}
+.footer-link li{height: 37px}
+.footer-link li a{color: #000}
+.footer .left{width: 33%;float: left}
+.footer .left li{font-weight: 300}
+.footer .left img{width: 160px;height:36px;margin-bottom: 20px}
+.footer .right{float: right;width: 67%}
+.footer .right ul{float: left;margin-left: 109px;font-size: 15px;}
+/*版权*/
+.copyRight{padding: 45px 0;}
+.copy-left{float: left}
+.copy-left li{font-size: 12px;color: #aaa;line-height: 2.3}
+.copy-left li i{display: inline-block;width: 15px;height: 15px;background: url("https://mobike.com/cn/assets/themes/moby/img/beian-icon.png")no-repeat;background-size: cover;}
+.copy-right{float: right}
+.copy-right img{margin: 0 10px;}
+/*手机端适配=媒体查询*/
+/*@media srceen and (判断条件){CSS代码}*/
+/*PAD端*/
+/*窗口小于1080px时覆盖*/
+@media screen and (max-width: 1080px){
+    .hero-promos .hero{width: 50%}
+    .container-md{width: 100%; box-sizing: border-box}
+    .hero{border-bottom: 3px solid #fff;}
+    .linkk{padding-left: 3%}
+    .links{padding-left: 5%}
+    .footer-link .left{width: 40%}
+    .footer-link .right{width: 60%}
+    .footer-link .right ul{margin-right: 49px;margin-left: 0}
+}
+/*窗口小于640px时覆盖*/
+@media screen and (max-width: 640px){
+    .hero-promos .hero{width: 100%}
+    .meta{width: 100%; height:85px;padding: 20px 0}
+    .linkk,.links{padding-left: 0;}
+    .news{height: 45px}
+    .des{width: 83%}
+.footer{height: 600px;}
+    .footer-link .left{width: 100%}
+    .footer-link .right{width: 100%}
+    .footer-link .right ul{margin-left: 0;margin-right:0;width: 50%;height: 170px}
+    .copy-left{width: 95%}
+    .copy-right{float: none}
+    .copy-right img{margin-top: 20px}
+}
