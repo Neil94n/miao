@@ -8,30 +8,43 @@
 </head>
 <body>
     <script id="ch0101/01" type="1.1.1">
-        console.log("Hello,World!")
+        console.log("Hello,World!");
     </script>
     
     <script id="ch0101/02" type="1.1.2">
-        a=123
-        b=456
-        c=789
-        console.log(b)
+      var a = prompt("请输入一个整数");
+      var b = prompt("请输入一个整数");
+      var c = prompt("请输入一个整数");
+      console.log(b);
      </script>
     
      <script id="ch0101/03" type="1.1.3">
-        
+      var a = prompt("请输入一个整数");
+      var b = prompt("请输入一个整数");
+      var c = prompt("请输入一个整数");
+      result = a+" "+b+" "+c;
+      console.log(result);
      </script>
     
      <script id="ch0101/04" type="1.1.4">
-        
+      var n = Number(prompt("请输入一个数"));
+      result = n.toFixed(3);
+      console.log(result);
      </script>
     
      <script id="ch0101/05" type="1.1.5">
-        
+      var n = Number(prompt("请输入一个数"));
+      result = n.toFixed(12);
+      console.log(result);
      </script>
     
      <script id="ch0101/06" type="1.1.6">
-        
+      var n1 = Number(prompt("请输入一个数"));
+      var n2 = Number(prompt("请输入一个数"));
+      var n3 = Number(prompt("请输入一个数"));
+      var n4 = Number(prompt("请输入一个数"));
+      result = n1+" "+n2+" "+n3.toFixed(6)+" "+n4.toFixed(6);
+      console.log(result);
      </script>
     
      <script id="ch0101/07" type="1.1.7">
@@ -39,11 +52,15 @@
      </script>
     
      <script id="ch0101/08" type="1.1.8">
-        
+      var p = prompt("请输入符号");
+      result = " "+" "+str+"\n"+" "+str+str+str+"\n"+str+str+str+str+str;
+      console.log(result);
      </script>
     
      <script id="ch0101/09" type="1.1.9">
-        
+      var str = prompt("请输入一种符号");
+      result = " "+" "+str+"\n"+" "+str+str+str+"\n"+str+str+str+str+str+"\n"+" "+str+str+str+"\n"+" "+" "+str;
+      console.log(result);
      </script> 
     
      <script id="ch0101/10" type="1.1.10">
@@ -61,7 +78,7 @@
 
 
      <script id="ch0102/01" type="1.2.1">
-       
+    
     </script>
     
     <script id="ch0102/02" type="1.2.2">
@@ -114,156 +131,193 @@
 
 
      <script id="ch0103/01" type="1.3.1">
-     
+      var p1 = Number(prompt("请输入一个数字"));
+      var p2 = Number(prompt("请输入一个数字"));
+      result = p1 + p2;
+      console.log(result);
     </script>
     
     <script id="ch0103/02" type="1.3.2">
-       
+      var p1 = Number(prompt("请输入一个数字"));
+      var p2 = Number(prompt("请输入一个数字"));
+      var p3 = Number(prompt("请输入一个数字"));
+      result = (p1 + p2) * p3;
+      console.log(result);
      </script>
     
      <script id="ch0103/03" type="1.3.3">
-        
+      var p1 = Number(prompt("请输入一个数字"));
+      var p2 = Number(prompt("请输入一个数字"));
+      var p3 = Number(prompt("请输入一个数字"));
+      result = ~~((p1 + p2)/p3);
+      console.log(result);
      </script>
     
      <script id="ch0103/04" type="1.3.4">
-        var a = Number(prompt("请输入被除数"))
-        var b = Number(prompt("请输入除数"))
-        var i = 0
+        var a = Number(prompt("请输入被除数"));
+        var b = Number(prompt("请输入除数"));
+        var i = 0;
         if (parseInt(a / b) === a / b){
-          alert("恭喜能整除,商为"+(a / b))
+          alert("恭喜能整除,商为"+(a / b));
         }else {
           do {
-            i = i + 1
+            i = i + 1;
           }while (a > b * i)
-            alert("商为"+(i-1)+","+"余数为"+(a + b * (1 - i)))
+            alert("商为"+(i-1)+","+"余数为"+(a + b * (1 - i)));
         }      
      </script>
     
      <script id="ch0103/05" type="1.3.5">
-        var a =prompt("输入a")
-        var b =prompt("输入a")
-        var c =a / b
-        var d =c.toFixed(9)
-        alert(d)
+        var a =Number(prompt("输入a"));
+        var b =Number(prompt("输入a"));
+        var c =a / b;
+        var d =c.toFixed(9);
+        alert(d);
       
      </script>
     
      <script id="ch0103/06" type="1.3.6">
-        var a =prompt("输入a")
-        var b =prompt("输入a")
-        var c =(b / a) * 100
-        var d =c.toFixed(3)
-        alert(d+"%")
+        var a =prompt("输入a");
+        var b =prompt("输入a");
+        var c =(b / a) * 100;
+        var d =c.toFixed(3);
+        alert(d+"%");
       
      </script>
     
      <script id="ch0103/07" type="1.3.7">
-        
+      var p1 = Number(prompt("请输入一个数字"));
+      var p2 = Number(prompt("请输入一个数字"));
+      var p3 = Number(prompt("请输入一个数字"));
+      var p4 = Number(prompt("请输入一个数字"));
+      var p5 = Number(prompt("请输入一个数字"));
+      result = (p2 * (p1**3)+p3 * (p1**2)+p4 * p1+p5).toFixed(7);
+      console.log(result);
      </script>
     
      <script id="ch0103/08" type="1.3.8">
-        var f = Number(prompt("请输入华氏温度"))
-        var c = 5 * (f - 32) / 9
-        var d = c.toFixed(5)
-        alert(d)
+        var f = Number(prompt("请输入华氏温度"));
+        var c = 5 * (f - 32) / 9;
+        var d = c.toFixed(5);
+        alert(d);
       
      </script>
     
      <script id="ch0103/09" type="1.3.9">
-        var r = Number(prompt("请输入半径"))
-        var pi = 3.14159 
-        var a = 2 * r
-        var b = 2 * pi * r
-        var c = pi * r * r
-        var d = a.toFixed(4)
-        var e = b.toFixed(4)
-        var f = c.toFixed(4)
-        alert (d + " " + e + " " + f)
+        var r = Number(prompt("请输入半径"));
+        var pi = 3.14159 ;
+        var a = 2 * r;
+        var b = 2 * pi * r;
+        var c = pi * r * r;
+        var d = a.toFixed(4);
+        var e = b.toFixed(4);
+        var f = c.toFixed(4);
+        alert (d + " " + e + " " + f);
       
      </script> 
     
      <script id="ch0103/10" type="1.3.10">
-        
+      var p1 = Number(prompt("请输入一个数字"));
+      var p2 = Number(prompt("请输入一个数字"));
+      result = (p1*p2/(p1+p2)).toFixed(2);
+      console.log(result);
      </script> 
 
      <script id="ch0103/11" type="1.3.11">
-    
+      var p1 = Number(prompt("请输入一个数字"));
+      var p2 = Number(prompt("请输入一个数字"));
+      result = (p1 % p2).toPrecision(4);
+      console.log(result);
     </script>
     
     <script id="ch0103/12" type="1.3.12">
-        
+      var pi = 3.14;
+      var p = Number(prompt("请输入一个数字"));
+      result = (4/3 * pi * p * p *p).toFixed(2);
+      console.log(result);
      </script>
     
      <script id="ch0103/13" type="1.3.13">
-        var a = prompt("请输入一个三位数")
-        var b = a.slice(0,1)
-        var c = a.slice(1,2)
-        var d = a.slice(2,3)
-        alert (d+c+b)
+        var a = prompt("请输入一个三位数");
+        var b = a.slice(0,1);
+        var c = a.slice(1,2);
+        var d = a.slice(2,3);
+        alert (d+c+b);
       
      </script>
     
      <script id="ch0103/14" type="1.3.14">
-        
+      var pi = 3.14159;
+      var p1 = Number(prompt("请输入一个数字"));
+      var p2 = Number(prompt("请输入一个数字"));
+      result = Math.ceil(20*1000/(p1*pi*p2*p2));
+      console.log(result);
      </script>
     
      <script id="ch0103/15" type="1.3.15">
-        var n =prompt("n个苹果")
-        var x =prompt("x个小时吃掉一个")
-        var y =9999
+        var n =prompt("n个苹果");
+        var x =prompt("x个小时吃掉一个");
+        var y =9999;
         while (y > n * x){
-          y = prompt ("y小时后")
+          y = prompt ("y小时后");
         }
-        var m = n - (parseInt(y / x) + 1)
-        alert("还剩"+m+"个")
+        var m = n - (parseInt(y / x) + 1);
+        alert("还剩"+m+"个");
       
      </script>
     
      <script id="ch0103/16" type="1.3.16">
-        
+      var p1 = Number(prompt("请输入一个数字"));
+      var p2 = Number(prompt("请输入一个数字"));
+      var p3 = Number(prompt("请输入一个数字"));
+      var p4 = Number(prompt("请输入一个数字"));
+      result = Math.sqrt((p3 - p1)**2+(p4 -p2)**2).toFixed(3);
+      console.log(result);
      </script>
     
      <script id="ch0103/17" type="1.3.17">
         function leng(x1,y1,x2,y2){
-            return Math.sqrt(( x1- x2)*(x1 - x2) +(y1 - y2)*(y1 - y2))
+            return Math.sqrt(( x1- x2)*(x1 - x2) +(y1 - y2)*(y1 - y2));
           }
-          var x1 = prompt ("请输入x1的值")
-          var y1 = prompt ("请输入y1的值")
-          var x2 = prompt ("请输入x2的值")
-          var y2 = prompt ("请输入y2的值")
-          var x3 = prompt ("请输入x3的值")
-          var y3 = prompt ("请输入y3的值")
-          var leng1 = leng(x1,y1,x2,y2)
-          var leng2 = leng(x1,y1,x3,y3)
-          var leng3 = leng(x2,y2,x3,y3)
-          var s = (leng1 + leng2 + leng3) / 2
-          var range = Math.sqrt(s * (s - leng1) * (s - leng2) * (s - leng3)).toFixed(2)
-          alert (range)
+          var x1 = prompt ("请输入x1的值");
+          var y1 = prompt ("请输入y1的值");
+          var x2 = prompt ("请输入x2的值");
+          var y2 = prompt ("请输入y2的值");
+          var x3 = prompt ("请输入x3的值");
+          var y3 = prompt ("请输入y3的值");
+          var leng1 = leng(x1,y1,x2,y2);
+          var leng2 = leng(x1,y1,x3,y3);
+          var leng3 = leng(x2,y2,x3,y3);
+          var s = (leng1 + leng2 + leng3) / 2;
+          var range = Math.sqrt(s * (s - leng1) * (s - leng2) * (s - leng3)).toFixed(2);
+          alert (range);
         
      </script>
     
      <script id="ch0103/18" type="1.3.18">
-        var a1 = Number(prompt("请输入第一项"))
-        var a2 = Number(prompt("请输入第二项"))
-        var n = Number(prompt("请输入要求的项数"))
-        var d = a2 - a1
-        var an = a1 + (n - 1) * d
-        alert (an)
+        var a1 = Number(prompt("请输入第一项"));
+        var a2 = Number(prompt("请输入第二项"));
+        var n = Number(prompt("请输入要求的项数"));
+        var d = a2 - a1;
+        var an = a1 + (n - 1) * d;
+        alert (an);
       
      </script>
     
      <script id="ch0103/19" type="1.3.19">
-        
+      var p1 = Number(prompt("请输入一个数字"));
+      var p2 = Number(prompt("请输入一个数字"));
+      result = p1 * p2;
+      console.log(result);
      </script> 
     
      <script id="ch0103/20" type="1.3.20">
-        var n = prompt("请输入n的值")
-        var number = 1
+        var n = prompt("请输入n的值");
+        var number = 1;
         for (i = 0;i < n;i++){
-          number *= 2
+          number *= 2;
         }
-        alert(number)
-      
+        alert(number);
      </script> 
 
 
