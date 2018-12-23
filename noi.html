@@ -1129,7 +1129,267 @@
   }
   console.log(currentN);
 </script>
-
+<script id="sort" sample-input="4 1 7" sample-output="1 4 7" comment="输入三个数，把此三个数按升序输出">
+    var a = Number(prompt())
+    var b = Number(prompt())
+    var c = Number(prompt())
+    var sum = a + b + c
+    var max = -Infinity
+    var min = Infinity
+    max = Math.max(max,a,b,c)
+    min = Math.min(min,a,b,c)
+    console.log(''+ min+ '/' + (sum - max - min) + '/'+max)
+  </script>
+  
+  题目：水仙花数。水仙花数是指一个N位的十进制数，其各位数的N次方的和等于它自己。
+  如：153 =　1的三次方+5的三次方+3的三次方，则153就是一个水仙花数
+  或：1634 =　1的四次方+6的四次方+3的四次方+4的四次方
+  因为1634是一个四位数。
+  找出100到100000以内所有的水仙花数。
+  <script id="narcissistic " sample-input="153" sample-output="YES" comment="判断一个数是否为水仙花数">
+    var x = +prompt();
+    var temp = x;
+    var bit = 1;
+    var pointer;
+    var sum = 0;
+    while(temp % 10 != temp){
+      temp = parseInt(temp / 10);
+      bit++;
+    }
+    temp = x;
+    pointer = bit;
+    for(var i = 1;i <= bit;i++){
+      sum += Math.pow(temp % 10,pointer);
+      temp = parseInt(temp / 10);
+    }
+    if(sum === x){
+      console.log('YES');
+    }
+    else{
+      console.log('NO');
+    }
+  </script>
+  <script id="narcissistics" sample-input="" sample-output="" comment="找出100到10000以内所有的水仙花数">
+    var temp;
+    var bit;
+    var pointer;
+    var sum;
+    for(var x = 100;x <= 10000;x++){
+      temp = x;
+      bit = 1;
+      pointer = 0;
+      sum = 0;
+      while(temp % 10 != temp){
+        temp = parseInt(temp / 10);
+        bit++;
+      }
+      temp = x;
+      pointer = bit;
+      for(var i = 1;i <= bit;i++){
+        sum += Math.pow(temp % 10,pointer);
+        temp = parseInt(temp / 10);
+      }
+      if(sum === x){
+        console.log(x);
+      }
+    }
+  </script>
+  <script id="palindrom" sample-input="12321" sample-output="YES" comment="判断一个非负整数是否为回文数字">
+    var x = +prompt();
+    var temp = x;
+    var bit = 1;
+    var reverseX = 0;
+    while(temp % 10 != temp){
+      temp = parseInt(temp / 10);
+      bit++;
+    }
+    temp = x;
+    for(var i = bit - 1;i >= 0;i--){
+      reverseX += (temp % 10) * Math.pow(10,i);
+      temp = parseInt(temp / 10);
+    }
+    if(x === reverseX){
+      console.log('YES');
+    }  
+  </script>
+  
+  <script id="weekday" sample-input="2018 6" sample-output="5" comment="输入年份与月份，给出该年该月的第一天是星期几">
+    
+  </script>
+  <script id="complete-number" sample-input="6" sample-output="YES" comment="判断一个数是否为完全数">
+    var x = +prompt();
+    var sum = 0;
+    for(var i = 1;i < x;i++){
+      if(x % i === 0){
+        sum += i;
+      }
+    }
+    if(sum === x){
+      console.log('YES');
+    } 
+  </script>
+  <script id="complete-numbers" sample-input="" sample-output="" comment="输出10000以内所有的完全数">
+    var sum;
+    for(var x = 1;x <= 10000;x++){
+      sum = 0;
+      for(var i = 1;i < x;i++){
+        if(x % i === 0){
+          sum += i;
+        }
+      }
+      if(sum === x){
+        console.log(x);
+      } 
+    }
+  </script>
+  <script id="prime" sample-input="7" sample-output="YES" comment="判断一个数是否为素数">
+    var x = +prompt();
+    var counter = 0;
+    if(x === 2){
+      console.log('YES');
+    }
+    else if(x % 2 != 0 && x != 1){
+      for(var i = 3;i <= (x / 2);i++){
+        if(i % 2 === 0){
+          continue;
+        }
+        else{
+          if(x % i == 0){
+            counter++;
+            break;
+          }
+        }
+      }
+      if(counter === 0){
+        console.log('YES');
+      }
+    }
+  </script>
+  <script id="primes" sample-input="" sample-output="" comment="输出100以内所有的素数">
+     var counter;
+    console.log(2);
+    for(var i = 3;i <= 100;i++){
+      counter = 0;
+      if(i % 2 === 0){
+        counter++;
+        continue;
+      }
+      else{
+        for(j = 2;j < (i / 2);j++){
+          if(j % 2 === 0){
+            continue;
+          }
+          else{
+            if(i % j === 0){
+              counter ++;
+              break;
+            }
+          }
+        }
+      }
+      if(counter === 0){
+        console.log(i);
+      }
+    }
+  </script>
+  <script id="itob" sample-input="123" sample-output="123" comment="数字转换成字符串，即实现Number函数的功能，不可使用+号或者Number函数">
+    var x = +prompt();
+    var str = '';
+    while(x % 10 != x){
+      str = String.fromCharCode(x % 10 + 48) + str;
+      x = parseInt(x / 10);
+    }
+    str = String.fromCharCode(x % 10 + 48) + str;
+    console.log(str);
+  </script>
+  <script id="lcf&lcm" sample-input="12 9" sample-output="36 3" comment="给定两个数，求它们的最小公倍数和最大公约数">
+    var a = +prompt();
+    var b = +prompt();
+    var max;
+    var min;
+    var str = '';
+    if(a === b){
+      console.log(a);
+      console.log(a);
+    }
+    else if(a > b){
+      max = a;
+      min = b;
+    }
+    else{
+      max = b;
+      min = a;
+    }
+    for(var i = max;i <= min * max;i++){
+      if(i % min == 0 && i % max == 0){
+        str += i;
+        break;
+      }
+    }
+    str += ' ';
+    for(var i = min;i >=1;i--){
+      if(min % i == 0 && max % i == 0){
+        str += i;
+        break;
+      }
+    }
+    console.log(str);
+  </script>
+  
+  题目：敲7。输出1到100以内所有7的倍数以及数字中包含7的数，如7（7的倍数），37（不是倍数但数位中包含7）都需要输出，依次类推
+  <script id="7" sample-input="" sample-output="" comment="敲7，输出7的倍数或数位中含有7的数如（21，27）">
+    var temp;
+    for(var i = 1;i <= 100;i++){
+      if(i % 7 === 0){
+        console.log(i);
+        continue;
+      }
+      else{
+        temp = i;
+        while(temp % 10 != temp){
+          if(temp % 10 === 7){
+            console.log(i);
+            break;
+          }
+          temp = parseInt(temp / 10);
+        }
+        if(temp % 10 === 7 && temp % 10 == temp){
+            console.log(i);
+          }
+      }
+    }
+  </script>
+  <script id="sqrt" sample-input="2" sample-output="1.414" comment="不使用Math.sqrt，求一个非负数的平方根，至少精确到小数点后3位">
+    var x = +prompt();
+    var high = x;
+    var low = 0;
+    var mid;
+    while(high - low > 0.000001){
+      mid = (low + high) / 2;
+      if(mid * mid == x){
+        break;
+      }
+      else if(mid * mid > x){
+        high = mid;
+      }
+      else if(mid * mid < x){
+        low = mid;
+      }
+    }
+    console.log(mid);
+  </script>
+  
+  给定M和N，求从M个物体中选出N个的排列与组合的数量：
+  Ｃ（ｍ，ｎ）
+  Ａ（ｍ，ｎ）
+  <script id="c&a">
+    
+  </script>
+  
+  题目：给定一个数，对其进行四舍五入，如1.4输出1，1.6输出2
+  <script id="round">
+    
+  </script>
 
 
 
