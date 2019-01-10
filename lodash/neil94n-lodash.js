@@ -27,8 +27,3 @@ compact: function(ary) {
     }
     return result
 }, 
-
-difference: function() {
-  
-}
-}
