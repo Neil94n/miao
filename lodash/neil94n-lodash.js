@@ -1,12 +1,24 @@
 var neil94n = {
   chunk: function chunk(ary, size = 1) {
-    var result = []
-    for(var i = 0; i< ary.length; i++) {
-      result.push(ary.slice(i, i + size))
+    let arr = []
+    let count = 0
+    let subArr = []
+    for (let i = 0; i < ary.length; i++) {
+        if (count < size) {
+            subArr.push(ary[i])
+            count++
+        }
+        if (count === size || i === ary.length - 1) {
+            arr.push(subArr)
+            subArr = []
+            count = 0
+        }
+
     }
-    return result
-  },
-  compact: function(ary) {
+    return arr
+},
+
+compact: function(ary) {
     var result = []
     for(var item of ary) {
       if (item) {
@@ -14,21 +26,9 @@ var neil94n = {
       }
     }
     return result
-  }
+}, 
+
+difference: function() {
+  
 }
-
-
-var neil94n = function(){
-
-  function chunk(ary, size = 1) {
-
-  }
-  function compact(ary) {
-
-  }
-
-  return {
-    chunk: chunk,
-    compact: compact,
-  }
-}()
+}
