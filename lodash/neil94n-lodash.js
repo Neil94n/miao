@@ -26,4 +26,4 @@ compact: function(ary) {
       }
     }
     return result
-}, 
+}
