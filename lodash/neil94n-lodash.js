@@ -1,29 +1,20 @@
 var neil94n = {
-  chunk: function chunk(ary, size = 1) {
-    let arr = []
-    let count = 0
-    let subArr = []
-    for (let i = 0; i < ary.length; i++) {
-        if (count < size) {
-            subArr.push(ary[i])
-            count++
-        }
-        if (count === size || i === ary.length - 1) {
-            arr.push(subArr)
-            subArr = []
-            count = 0
-        }
+   chunk: function chunk(array,size=1){
+     let sum = [];
+     for(let i=0; i<array.length; i+=size){
+       sum.push(array.slice(i,i + size))
+     }
+     return sum
+   },
 
+   compact: function compact(array){
+     let result = []
+     for (let n of array){
+       if (n){
+         result.push(n)
+       }
+     }
+     return result
     }
-    return arr
-},
 
-compact: function(ary) {
-    var result = []
-    for(var item of ary) {
-      if (item) {
-        result.push(item)
-      }
-    }
-    return result
-}
+  }
