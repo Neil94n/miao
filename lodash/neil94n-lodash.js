@@ -15,6 +15,21 @@ var neil94n = {
        }
      }
      return result
+    },
+
+    concat: function concat(array,...values){
+      let result = []
+      for (let n of array){
+        result.push(n)
+      }
+      for (let a of values){
+        if(Array.isArray(a)){
+          result.push(...a)
+        }else{
+          result.push(a)
+        }
+      }
+      return result
     }
 
   }
