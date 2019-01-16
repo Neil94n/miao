@@ -69,5 +69,11 @@ var neil94n = {
          array.pop()
       }
       return array
+    },
+    fill: function fill(array,value,start=0,end=array.length){
+      for (let i = start;i < end; i++){
+        array[i] = value
+      }
+      return array
     }
   }
