@@ -60,5 +60,14 @@ var neil94n = {
         array.shift()
       }
       return array
+    },
+    dropRight: function dropRight(array, n=1){
+      if(n>=array.length){
+        return[]
+      }
+      for (let i = 0;i < n;i++){
+         array.pop()
+      }
+      return array
     }
   }
