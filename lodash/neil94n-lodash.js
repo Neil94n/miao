@@ -75,5 +75,17 @@ var neil94n = {
         array[i] = value
       }
       return array
+    },
+    head: function head(array) {
+      if (array.length === 0) return undefined
+      return array[0]
+    },
+    indexOf: function indexOf(array, value, fromIndex = 0) {
+      if (fromIndex >= array.length) return -1
+      for (let i = fromIndex; i < array.length; i++) {
+        if (array[i] === value) {
+          return i
+        }
+      }
     }
   }
